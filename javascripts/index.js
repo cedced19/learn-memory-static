@@ -20,7 +20,7 @@ app.config(['$routeProvider', function($routeProvider){
         });
 }]);
 app.run(['$rootScope', '$location', '$http', function ($rootScope, $location, $http) {
-        $http.get('../data.json').success(function (data) {
+        $http.get('data.json').success(function (data) {
             $rootScope.lessons = data;
         }).error(function() {
             sweet.show('Oops...', 'Something went wrong!', 'error');
