@@ -6,7 +6,10 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     minifyCss = require('gulp-minify-css'),
     rename = require('gulp-rename'),
-    htmlmin = require('gulp-htmlmin');
+    gutil = require('gulp-util'),
+    ghpages = require('gh-pages'),
+    htmlmin = require('gulp-htmlmin'),
+    path = require('path');
 
 gulp.task('favicon', function () {
     gulp.src('favicon.ico')
@@ -50,3 +53,7 @@ gulp.task('css', function () {
 });
 
 gulp.task('default', ['css', 'html', 'js', 'fonts', 'favicon', 'views']);
+
+gulp.task('deploy', ['default'], function(done) {
+  ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log }, done);
+});

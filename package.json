@@ -39,7 +39,8 @@
     "gulp-minify-css": "^1.2.3",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^1.5.2",
-    "vinyl-transform": "^1.0.0"
+    "gulp-rename": "^1.2.2",
+    "vinyl-source-stream": "^1.1.0"
   },
   "licenses": [
     {
@@ -50,8 +51,8 @@
   "dependencies": {
     "colors": "^1.1.2",
     "commander": "^2.9.0",
-    "gulp-rename": "^1.2.2",
-    "request": "^2.69.0",
-    "vinyl-source-stream": "^1.1.0"
+    "gh-pages": "^0.9.0",
+    "gulp-util": "^3.0.7",
+    "request": "^2.69.0"
   }
 }
