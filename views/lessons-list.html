@@ -1,0 +1,22 @@
+<input ng-model="search" type="text" class="form-control" placeholder="Search">
+<br>
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Substance</th>
+                <th>Content</th>
+                <th>Last update</th>
+                <th>Creation date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="lesson in lessons | filter:search | orderBy:'updatedAt':true" ng-click="goLesson(lesson)" class="fade">
+                <td>{{lesson.substance}}</td>
+                <td>{{lesson.keywords | limitTo : 20}} ...</td>
+                <td>{{lesson.updatedAt | date: 'dd/MM/yyyy' }}</td>
+                <td>{{lesson.createdAt | date: 'dd/MM/yyyy' }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

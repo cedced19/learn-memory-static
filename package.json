@@ -1,0 +1,57 @@
+{
+  "name": "learn-memory-static",
+  "version": "0.0.0",
+  "description": "A static software to host your lessons",
+  "main": "data-generator.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cedced19/learn-memory-static"
+  },
+  "keywords": [
+    "cli",
+    "center",
+    "learn",
+    "memory",
+    "app",
+    "school",
+    "static"
+  ],
+  "scripts": {
+    "test": "mocha"
+  },
+  "bugs": {
+    "url": "https://github.com/cedced19/learn-memory-static/issues"
+  },
+  "homepage": "https://github.com/cedced19/learn-memory-static",
+  "author": {
+    "name": "Cédric",
+    "email": "cedced19@gmail.com",
+    "url": "https://github.com/cedced19"
+  },
+  "devDependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^1.5.2",
+    "vinyl-transform": "^1.0.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://cedced19.github.io/license/"
+    }
+  ],
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "gulp-rename": "^1.2.2",
+    "request": "^2.69.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
