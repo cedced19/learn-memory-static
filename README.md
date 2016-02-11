@@ -1,9 +1,17 @@
-# Learn-Memory-Static
+# Learn Memory Static
 A static software to host your lessons.
 Here it is the generator of this software.
 
 [![Build Status](https://travis-ci.org/cedced19/learn-memory-static.svg)](https://travis-ci.org/cedced19/learn-memory-static)
 
+## Installation
+
+__Required:__ Node.js and git
+
+```bash
+$ git clone --depth=1 --branch=master https://github.com/cedced19/zikcenter-static
+$ node data-generator.js -f data.json
+```
 
 ## Data
 You need a __save__ of a [Learn Memory Server](https://github.com/cedced19/learn-memory) which you can get by using [Learn Memory Archiver](https://github.com/cedced19/learn-memory-archiver).

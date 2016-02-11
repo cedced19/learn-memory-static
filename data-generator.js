@@ -4,7 +4,8 @@ var fs = require('fs'),
    request = require('request'),
    program = require('commander'),
    colors = require('colors'),
-   pkg = require('./package.json');
+   pkg = require('./package.json'),
+   isThere =  require('is-there');
 
 var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/; // check whether a string is a URL
 
@@ -36,6 +37,7 @@ if (program.server) {
     console.log('This isn\'t a valid URL.'.red);
   }
 } else if (program.filename) {
+    if (!isThere(program.filename)) return console.log('This isn\'t a valid filename.'.red);
     var readStream = fs.createReadStream(program.filename);
 
     readStream.on('open', function () {
