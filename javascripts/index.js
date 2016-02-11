@@ -8,11 +8,11 @@ var app = angular.module('LearnMemory', ['hSweetAlert', 'ngSanitize', 'ngRoute']
 app.config(['$routeProvider', function($routeProvider){
         $routeProvider
         .when('/', {
-            templateUrl: '/views/lessons-list.html',
+            templateUrl: './views/lessons-list.html',
             controller: 'LearnMemoryLessonsListCtrl'
         })
         .when('/lessons/:id', {
-            templateUrl: '/views/lessons-id.html',
+            templateUrl: './views/lessons-id.html',
             controller: 'LearnMemoryLessonsIdCtrl'
         })
         .otherwise({

@@ -16,9 +16,6 @@
     "school",
     "static"
   ],
-  "scripts": {
-    "test": "mocha"
-  },
   "bugs": {
     "url": "https://github.com/cedced19/learn-memory-static/issues"
   },
