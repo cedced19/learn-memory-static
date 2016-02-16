@@ -1,10 +1,9 @@
 require('angular'); /*global angular*/
 require('angular-route');
 require('angular-sanitize');
-require('./alert/sweet-alert.js');
-require('./alert/ng-sweet-alert.js');
+require('ng-notie');
 
-var app = angular.module('LearnMemory', ['hSweetAlert', 'ngSanitize', 'ngRoute']);
+var app = angular.module('LearnMemory', ['ngNotie', 'ngSanitize', 'ngRoute']);
 app.config(['$routeProvider', function($routeProvider){
         $routeProvider
         .when('/', {
@@ -19,11 +18,11 @@ app.config(['$routeProvider', function($routeProvider){
             redirectTo: '/'
         });
 }]);
-app.run(['$rootScope', '$location', '$http', function ($rootScope, $location, $http) {
+app.run(['$rootScope', '$location', '$http', 'notie', function ($rootScope, $location, $http, notie) {
         $http.get('data.json').success(function (data) {
             $rootScope.lessons = data;
         }).error(function() {
-            sweet.show('Oops...', 'Something went wrong!', 'error');
+            notie.alert(3, 'Something went wrong!', 3);
             $location.path('/');
         });
 }]);
