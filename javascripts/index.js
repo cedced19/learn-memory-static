@@ -24,7 +24,7 @@ app.config(['$routeProvider', '$translateProvider', function($routeProvider, $tr
         // i18n configuration
         $translateProvider
         .useStaticFilesLoader({
-            prefix: '/langs/locale-',
+            prefix: './langs/locale-',
             suffix: '.json'
         })
         .registerAvailableLanguageKeys(['en', 'fr'], {
