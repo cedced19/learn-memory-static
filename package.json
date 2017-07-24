@@ -26,9 +26,12 @@
     "url": "https://github.com/cedced19"
   },
   "devDependencies": {
-    "angular": "^1.5.0",
-    "angular-route": "^1.5.0",
-    "angular-sanitize": "^1.5.0",
+    "angular": "1.4.5",
+    "angular-route": "1.4.5",
+    "angular-sanitize": "1.4.5",
+    "angular-translate": "^2.15.2",
+    "angular-translate-loader-static-files": "^2.15.2",
+    "angular-translate-loader-url": "^2.15.2",
     "ng-notie": "0.0.1",
     "browserify": "^13.0.0",
     "gulp": "^3.9.1",

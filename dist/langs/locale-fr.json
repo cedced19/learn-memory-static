@@ -1,0 +1,11 @@
+{
+  "error": "Une erreur est survenue !",
+  "updated_at": "Mise à jour à ",
+  "created_at": "Créé à",
+  "subject": "Matière",
+  "content": "Contenu",
+  "last_update": "Dernière modification",
+  "creation_date": "Date de création",
+  "date": "{{ date | date:'dd/MM/yyyy' }}",
+  "search": "Recherche"
+}

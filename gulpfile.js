@@ -33,6 +33,16 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('fonts', function () {
+    return gulp.src('fonts/**.*')
+        .pipe(gulp.dest('dist/fonts'));
+});
+
+gulp.task('langs', function () {
+    return gulp.src('langs/**.*')
+        .pipe(gulp.dest('dist/langs'));
+});
+
 gulp.task('js', function () {
     var bundleStream = browserify('javascripts/index.js').bundle();
 
@@ -52,7 +62,7 @@ gulp.task('css', function () {
         .pipe(gulp.dest('dist/stylesheets'));
 });
 
-gulp.task('default', ['css', 'html', 'js', 'fonts', 'favicon', 'views']);
+gulp.task('default', ['css', 'html', 'js', 'langs', 'fonts', 'favicon', 'views']);
 
 gulp.task('deploy', ['default'], function(done) {
   ghpages.publish(path.join(__dirname, 'dist'), { logger: gutil.log }, done);

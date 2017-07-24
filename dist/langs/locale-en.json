@@ -1,0 +1,11 @@
+{
+  "error": "Something went wrong!",
+  "updated_at": "Updated at",
+  "created_at": "Created at",
+  "subject": "Subject",
+  "content": "Content",
+  "last_update": "Last update",
+  "creation_date": "Creation date",
+  "date": "{{ date | date:'MM/dd/yyyy' }}",
+  "search": "Search"
+}

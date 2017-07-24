@@ -2,9 +2,12 @@ require('angular'); /*global angular*/
 require('angular-route');
 require('angular-sanitize');
 require('ng-notie');
+require('angular-translate');
+require('angular-translate-loader-static-files');
+require('angular-translate-loader-url');
 
-var app = angular.module('LearnMemory', ['ngNotie', 'ngSanitize', 'ngRoute']);
-app.config(['$routeProvider', function($routeProvider){
+var app = angular.module('LearnMemory', ['ngNotie', 'ngSanitize', 'ngRoute', 'pascalprecht.translate']);
+app.config(['$routeProvider', '$translateProvider', function($routeProvider, $translateProvider) {
         $routeProvider
         .when('/', {
             templateUrl: './views/lessons-list.html',
@@ -17,6 +20,22 @@ app.config(['$routeProvider', function($routeProvider){
         .otherwise({
             redirectTo: '/'
         });
+
+        // i18n configuration
+        $translateProvider
+        .useStaticFilesLoader({
+            prefix: '/langs/locale-',
+            suffix: '.json'
+        })
+        .registerAvailableLanguageKeys(['en', 'fr'], {
+          'fr_*': 'fr',
+          'en_*': 'en',
+          '*': 'en'
+        })
+        .useSanitizeValueStrategy(null)
+        .determinePreferredLanguage()
+        .fallbackLanguage('en');
+
 }]);
 app.run(['$rootScope', '$location', '$http', 'notie', function ($rootScope, $location, $http, notie) {
         $http.get('data.json').success(function (data) {
