@@ -37,13 +37,5 @@ app.config(['$routeProvider', '$translateProvider', function($routeProvider, $tr
         .fallbackLanguage('en');
 
 }]);
-app.run(['$rootScope', '$location', '$http', 'notie', function ($rootScope, $location, $http, notie) {
-        $http.get('data.json').success(function (data) {
-            $rootScope.lessons = data;
-        }).error(function() {
-            notie.alert(3, 'Something went wrong!', 3);
-            $location.path('/');
-        });
-}]);
 app.controller('LearnMemoryLessonsListCtrl', require('./controllers/lessons-list.js'));
 app.controller('LearnMemoryLessonsIdCtrl', require('./controllers/lessons-id.js'));
