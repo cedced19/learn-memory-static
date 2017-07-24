@@ -28,7 +28,7 @@ if (program.server) {
   var url = 'http://' + program.server;
   var matcher = /^(?:\w+:)?\/\/([^\s\.]+\.\S{2}|localhost[\:?\d]*)\S*$/; // check whether a string is a URL
   if (matcher.test(url)) {
-    request(url + '/api/long/')
+    request(url + '/api?createdAt&content')
     .on('error', function(err) {
        console.log('Error of the request.'.red);
     })
