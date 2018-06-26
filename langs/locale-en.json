@@ -7,5 +7,6 @@
   "last_update": "Last update",
   "creation_date": "Creation date",
   "date": "{{ date | date:'MM/dd/yyyy' }}",
-  "search": "Search"
+  "search": "Search",
+  "file": "File"
 }
