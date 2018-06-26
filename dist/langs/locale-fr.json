@@ -7,5 +7,6 @@
   "last_update": "Dernière modification",
   "creation_date": "Date de création",
   "date": "{{ date | date:'dd/MM/yyyy' }}",
-  "search": "Recherche"
+  "search": "Recherche",
+  "file": "Fichier"
 }

@@ -1,8 +1,19 @@
-<p class="lesson-info">
+<div class="lesson-info">
     <span class="substance">{{currentLesson.substance}}</span>
     <span class="date">{{ 'last_update' | translate }}: {{ 'date' | translate:{date: currentLesson.updatedAt} }}</span>
     <br>
     <span class="icon-print action" ng-click="print()"></span>
     <span class="date">{{ 'creation_date' | translate }}: {{ 'date' | translate:{date: currentLesson.createdAt} }}</span>
-</p>
+</div>
+<div class="attachments">
+    <div class="attachments-list">
+        <div class="attachment" ng-repeat="attachment in currentLesson.attachments">
+            <span>
+                <i class="icon-file-image"></i> {{ 'file' | translate }} {{attachment.split('.').pop()}}</span>
+            <a href="./attachments/{{attachment}}" target="_blank">
+                <i class="icon-download"></i>
+            </a>
+        </div>
+    </div>
+</div>
 <div ng-bind-html="currentLesson.content"></div>
